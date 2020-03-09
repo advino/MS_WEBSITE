@@ -4,6 +4,7 @@
     <div style="width: 100%; height: 150px;">
 
     </div>
+    <!-- <About></About> -->
     <div class="event-list">
       <div v-for="e in events" :key="e.title" style="width: 25%;">
         <Event :data="e"></Event>
@@ -16,6 +17,7 @@
 
 <script>
   import Description from '@/components/Description.vue';
+  // import About from '@/components/About.vue';
   import Event from '@/components/Event.vue';
 
 export default {
