@@ -1,15 +1,96 @@
 <template>
   <div class="site-container">
-    
+    <Description></Description>
+    <div style="width: 100%; height: 150px;">
+
+    </div>
+    <div class="event-list">
+      <div v-for="e in events" :key="e.title" style="width: 25%;">
+        <Event :data="e"></Event>
+      </div>
+    </div>
+
+
   </div>  
 </template>
 
 <script>
-export default {
+  import Description from '@/components/Description.vue';
+  import Event from '@/components/Event.vue';
 
+export default {
+  components: {Description, Event},
+  props: [],
+  data() {
+    return {
+      events: [
+        {
+          details: "TBD",
+          title: "Coming Soon",
+          blurb: "Stay tuned for our next event"
+        },
+        {
+          details: "June, 2020 // Spain",
+          title: "Sonar",
+          blurb: "A collaboration with Soundcloud and Sonar Music Festival. An interactive experience for vistors to interact and engage with musicians attending the festival."
+        },
+        {
+          details: "March, 2020 // London",
+          title: "AVA",
+          blurb: "A collaboration with Soundcloud and Sonar Music Festival. An interactive experience for vistors to interact and engage with musicians attending the festival."
+        },
+        {
+          details: "February, 2020 // Brooklyn, NY",
+          title: "Mixed Signals X Short Circut",
+          blurb: "A collaboration with Brooklyn based DJ collective, Short Circut. We demoed our updated experience to an auidence of over 300 people."
+        },
+        {
+          details: "May, 2019 // Providence, RI",
+          title: "Rave in the Commons",
+          blurb: "Mixed Signals first event. An interactive experience featuring DJ Brutalist Ikea, DJ Daddy Long Legs, and DJ Mister World Wides"
+        }
+      ]
+    }
+  }
 }
 </script>
 
 <style>
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0e0e0e;
+  }
+    
+  body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+
+  .site-container {
+    width: 100%;
+    height: 100%;
+    background-image: url('~@/assets/backdrop.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+  }
+
+  .event-list {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
 
 </style>
