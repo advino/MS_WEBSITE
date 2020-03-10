@@ -1,10 +1,9 @@
 <template>
   <div class="site-container">
     <Description></Description>
-    <div style="width: 100%; height: 150px;">
+    <div style="width: 100%; height: 350px;">
 
     </div>
-    <!-- <About></About> -->
     <div class="event-list">
       <div v-for="e in events" :key="e.title" style="width: 25%;">
         <Event :data="e"></Event>
@@ -43,7 +42,7 @@ export default {
         },
         {
           details: "February, 2020 // Brooklyn, NY",
-          title: "Mixed Signals X Short Circut",
+          title: "Short Circut",
           blurb: "A collaboration with Brooklyn based DJ collective, Short Circut. We demoed our updated experience to an auidence of over 300 people."
         },
         {
@@ -79,11 +78,11 @@ export default {
   .site-container {
     width: 100%;
     height: 100%;
-    background-image: url('~@/assets/backdrop.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     overflow-y: scroll;
+    z-index: 10;
   }
 
   .event-list {
