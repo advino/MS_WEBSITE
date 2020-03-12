@@ -38,7 +38,7 @@ const s = (p) => {
         });
 
         canvasReady = true;
-        audio.loop(); 
+ 
         p.masterVolume(0);
       }
   
@@ -77,6 +77,11 @@ const s = (p) => {
     }
   
     toggleAudio = () => {
+
+      if(!audio.isPlaying()) {
+        audio.loop();
+      }
+
       if(vol == .6) {
         vol = 0;
         // audio.pause();
