@@ -7,13 +7,39 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
 
     <style>
-      #app {
-        opacity: 1;
-        transition: opacity .6s;
-      }
 
       #app-passive {
         opacity: 0;
+      }
+
+      #bg {
+        display: block;
+        position: fixed;
+        top: 5%;
+        right: 5%;
+        width: 45px;
+        height: 45px;
+        border-style: solid; 
+        border-radius: 100px;
+        border-color: white;
+        padding: 10px;
+        background-color: transparent;
+
+        outline: none;
+      }
+
+      #canvas-container {
+        
+        transition: opacity .6s;
+      }
+
+      .canvas-passive {
+        opacity: 0;
+      } 
+
+      .canvas-active {
+        opacity: 1;
+
       }
 
     </style>
@@ -29,7 +55,13 @@
     <!-- built files will be auto injected -->
 
 
-    <div id="canvas-container" style="position: fixed; left: 0; top: 0; z-index: -1"></div>
+    <button id="bg">
+
+    </button>
+
+    <div id="canvas-container" class="canvas-passive" style="position: fixed; left: 0; top: 0; z-index: -1"></div>
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>

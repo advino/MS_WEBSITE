@@ -9,10 +9,6 @@
         <Event :data="e"></Event>
       </div>
     </div>
-
-    <!-- <button id="bg">
-
-    </button> -->
   </div>  
 </template>
 
@@ -85,6 +81,7 @@ export default {
     overflow-y: scroll;
     z-index: 10;
     opacity: 1;
+    
     transition: opacity .6s;
   }
 
@@ -94,21 +91,6 @@ export default {
     height: auto;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-
-  #bg {
-    display: block;
-    position: fixed;
-    top: 5%;
-    right: 5%;
-    width: 25px;
-    height: 25px;
-    border-style: solid; 
-    border-radius: 100px;
-    border-color: white;
-    padding: 10px;
-    background-color: none;
-
   }
 
 </style>

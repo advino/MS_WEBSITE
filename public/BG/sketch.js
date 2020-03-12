@@ -1,18 +1,17 @@
 const s = (p) => {
     let demo1Shader, img, fft, audio;
-  
-    let app;
+    let app, appToggle, canvas;
+
+    let canvasReady = false;
 
     p.preload = () => {
       audio = p.loadSound('BG/sounds/wav1_terekke.mp3')
       demo1Shader = p.loadShader('BG/shaders/base.vert', 'BG/shaders/main.frag')
       img = p.loadImage('BG/backdrop.jpg');
-
     }
   
     p.setup = () => {
 
-  
         p.pixelDensity(1);
         p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
   
@@ -23,12 +22,19 @@ const s = (p) => {
         demo1Shader.setUniform('u_texture', img);
         demo1Shader.setUniform('u_tResolution', [img.width, img.height]);
       
-        app = document.querySelector(".site-container");
-        console.log(app); 
-  
-    }
+        appToggle = document.getElementById("bg");
+        app = document.querySelector('.site-container');
+        canvas = document.getElementById("canvas-container");
+
+        appToggle.addEventListener('click', () => {
+          toggleAudio();
+        });
+
+        canvasReady = true;
+      }
   
     p.draw = () => {
+
       fft.analyze()
   
       const bass = fft.getEnergy("bass");
@@ -45,6 +51,12 @@ const s = (p) => {
       demo1Shader.setUniform('u_mid', mapMid);
   
       p.rect(0,0, p.width, p.height);
+
+
+      if(canvasReady) {
+        canvas.classList.add('canvas-active');
+        canvasReady = false;
+      }
     }
   
     p.windowResized = () => {
@@ -63,12 +75,6 @@ const s = (p) => {
         console.log("Play");
       }
     }
-    
-    window.addEventListener('click', () => {
-      toggleAudio();
-    });
-
-    
   };
   
   new p5(s, "canvas-container");
