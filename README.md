@@ -1,4 +1,4 @@
-#Mixed Signals Site
+# Mixed Signals Site
 
 The homepage for Mixed Signals. A design and technology studio building digital tools for enhancing live experiences.
 
