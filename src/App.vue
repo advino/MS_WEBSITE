@@ -1,7 +1,7 @@
 <template>
   <div class="site-container">
     <Description></Description>
-    <div style="width: 100%; height: 350px;">
+    <div style="width: 100%; height: 370px;">
 
     </div>
     <div class="event-list">
@@ -16,7 +16,6 @@
 
 <script>
   import Description from '@/components/Description.vue';
-  // import About from '@/components/About.vue';
   import Event from '@/components/Event.vue';
 
 export default {
@@ -33,12 +32,12 @@ export default {
         {
           details: "June, 2020 // Spain",
           title: "Sonar",
-          blurb: "A collaboration with Soundcloud and Sonar Music Festival. An interactive experience for vistors to interact and engage with musicians attending the festival."
+          blurb: "A collaboration with Soundcloud and Sonar Music Festival. An interactive experience for vistors to engage with musicians attending the festival."
         },
         {
           details: "March, 2020 // London",
           title: "AVA",
-          blurb: "A collaboration with Soundcloud and Sonar Music Festival. An interactive experience for vistors to interact and engage with musicians attending the festival."
+          blurb: "A collaboration with Soundcloud and AVA. An interactive experience for vistors to engage with musicians attending the festival."
         },
         {
           details: "February, 2020 // Brooklyn, NY",
