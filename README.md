@@ -1,29 +1,5 @@
-# ms_site
+#Mixed Signals Site
 
-## Project setup
-```
-npm install
-```
+The homepage for Mixed Signals. A design and technology studio building digital tools for enhancing live experiences.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The site was created by Advait Kalakkad in collaboration with Danielle Moalem. Together two of them form the core partnership that is Mixed Signals. 

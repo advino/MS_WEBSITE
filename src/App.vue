@@ -86,18 +86,18 @@ export default {
 
   #spacer {
     width: 100%; 
-    height: 370px;
+    height: 60%;
   }
 
   @media (min-width: 700px) and (max-width: 900px) {
     #spacer {
-      height: 150px;
+      height: 50%;
     }
   } 
 
   @media (min-width: 1000px) and (max-width: 1100px) {
     #spacer {
-      height: 270px;
+      height: 50%;
     }
   }
 

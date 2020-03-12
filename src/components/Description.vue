@@ -3,8 +3,7 @@
       <h1 class="description-title">MIXED SIGNALS</h1>
       <span class="description-text">
         Mixed Signals is a design and technology studio 
-        building real-time tools to augment live events 
-        across digital and physical spaces.
+        building digital tools to enhance live events.
       </span>
   </div>
 </template>
