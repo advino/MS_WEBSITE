@@ -1,7 +1,7 @@
 <template>
   <div class="site-container">
     <Description></Description>
-    <div style="width: 100%; height: 370px;">
+    <div id="spacer">
 
     </div>
     <div class="event-list">
@@ -28,16 +28,6 @@ export default {
           blurb: "Stay tuned for our next event"
         },
         {
-          details: "June, 2020 // Spain",
-          title: "Sonar",
-          blurb: "A collaboration with Soundcloud and Sonar Music Festival. An interactive experience for vistors to engage with musicians attending the festival."
-        },
-        {
-          details: "March, 2020 // London",
-          title: "AVA",
-          blurb: "A collaboration with Soundcloud and AVA. An interactive experience for vistors to engage with musicians attending the festival."
-        },
-        {
           details: "February, 2020 // Brooklyn, NY",
           title: "Short Circut",
           blurb: "A collaboration with Brooklyn based DJ collective, Short Circut. We demoed our updated experience to an auidence of over 300 people."
@@ -54,7 +44,7 @@ export default {
 </script>
 
 <style>
-  
+
   * {
     box-sizing: border-box;
   }
@@ -62,7 +52,7 @@ export default {
   html{
     width: 100vw;
     height: 100vh;
-    background-color: #0e0e0e;
+    background-color: #000000;
   }
     
   body {
@@ -81,7 +71,7 @@ export default {
     overflow-y: scroll;
     z-index: 10;
     opacity: 1;
-    
+
     transition: opacity .6s;
   }
 
@@ -91,6 +81,24 @@ export default {
     height: auto;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+
+  #spacer {
+    width: 100%; 
+    height: 370px;
+  }
+
+  @media (min-width: 700px) and (max-width: 900px) {
+    #spacer {
+      height: 150px;
+    }
+  } 
+
+  @media (min-width: 1000px) and (max-width: 1100px) {
+    #spacer {
+      height: 270px;
+    }
   }
 
 </style>

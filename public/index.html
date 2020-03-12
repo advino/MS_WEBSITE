@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <style>
 
       #app-passive {
@@ -16,7 +17,7 @@
         display: block;
         position: fixed;
         top: 5%;
-        right: 5%;
+        right: 4%;
         width: 45px;
         height: 45px;
         border-style: solid; 
@@ -30,7 +31,7 @@
 
       #canvas-container {
         
-        transition: opacity .6s;
+        transition: opacity 1s;
       }
 
       .canvas-passive {
@@ -40,6 +41,18 @@
       .canvas-active {
         opacity: 1;
 
+      }
+
+      .material-icons {
+        color: white;
+      }
+
+      #on {
+        display: block;
+      }
+
+      #off {
+        display: none;
       }
 
     </style>
@@ -56,7 +69,16 @@
 
 
     <button id="bg">
-
+      <div id="on">
+        <i class="material-icons">
+          volume_up
+        </i>
+      </div>
+      <div id="off">
+        <i class="material-icons">
+          volume_off
+        </i>
+      </div>
     </button>
 
     <div id="canvas-container" class="canvas-passive" style="position: fixed; left: 0; top: 0; z-index: -1"></div>

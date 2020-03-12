@@ -4,6 +4,11 @@ const s = (p) => {
 
     let canvasReady = false;
 
+    let on, off;
+    let vol = 0;
+    let volDelta = 0;
+
+
     p.preload = () => {
       audio = p.loadSound('BG/sounds/wav1_terekke.mp3')
       demo1Shader = p.loadShader('BG/shaders/base.vert', 'BG/shaders/main.frag')
@@ -15,7 +20,7 @@ const s = (p) => {
         p.pixelDensity(1);
         p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
   
-        fft = new p5.FFT()
+        fft = new p5.FFT();
         p.shader(demo1Shader);
   
         demo1Shader.setUniform('u_resolution', [p.windowWidth, p.windowHeight]);
@@ -25,17 +30,21 @@ const s = (p) => {
         appToggle = document.getElementById("bg");
         app = document.querySelector('.site-container');
         canvas = document.getElementById("canvas-container");
+        on = document.getElementById('on');
+        off = document.getElementById('off');
 
         appToggle.addEventListener('click', () => {
           toggleAudio();
         });
 
         canvasReady = true;
+        audio.loop(); 
+        p.masterVolume(0);
       }
   
     p.draw = () => {
 
-      fft.analyze()
+      fft.analyze();
   
       const bass = fft.getEnergy("bass");
       const treble = fft.getEnergy("treble");
@@ -52,6 +61,9 @@ const s = (p) => {
   
       p.rect(0,0, p.width, p.height);
 
+      volDelta = p.lerp(volDelta, vol, .01);
+
+      p.masterVolume(vol, .6);
 
       if(canvasReady) {
         canvas.classList.add('canvas-active');
@@ -65,13 +77,19 @@ const s = (p) => {
     }
   
     toggleAudio = () => {
-      if(audio.isPlaying()) {
-        audio.pause();
+      if(vol == .6) {
+        vol = 0;
+        // audio.pause();
         app.removeAttribute('id');
+        on.style.display = 'block';
+        off.style.display = 'none';
         console.log("Pause");
       } else {
-        audio.loop();
+        // audio.loop();
+        vol = .6;
         app.setAttribute('id', 'app-passive');
+        on.style.display = 'none';
+        off.style.display = 'block';
         console.log("Play");
       }
     }

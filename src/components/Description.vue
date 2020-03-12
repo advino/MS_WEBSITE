@@ -34,7 +34,7 @@ export default {
     }
 
     .description-container {
-        width: 50%;
+        width: 100%;
         height: auto;
         padding: 15px;
         padding-left: 25px;
@@ -42,6 +42,7 @@ export default {
     }
 
     .description-title {
+        width: 100%;
         margin: 0;
         margin-bottom: 10px;
         font-size: 48px;
@@ -51,7 +52,7 @@ export default {
 
     .description-text {
         display: block;
-        width: 100%;
+        width: 50%;
         font-size: 28px;
         color: #fff;
         font-family: Reader;
