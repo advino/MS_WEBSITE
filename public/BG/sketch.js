@@ -8,11 +8,16 @@ const s = (p) => {
     let vol = 0;
     let volDelta = 0;
 
+    let imageIdx = 1;
 
     p.preload = () => {
+
+      imageIdx = Math.ceil(Math.random() * 4);
+
+
       audio = p.loadSound('BG/sounds/wav1_terekke.mp3')
       demo1Shader = p.loadShader('BG/shaders/base.vert', 'BG/shaders/main.frag')
-      img = p.loadImage('BG/backdrop3.jpg');
+      img = p.loadImage(`BG/backdrop${imageIdx}.jpg`);
     }
   
     p.setup = () => {
