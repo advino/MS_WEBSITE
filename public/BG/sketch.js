@@ -12,7 +12,7 @@ const s = (p) => {
     p.preload = () => {
       audio = p.loadSound('BG/sounds/wav1_terekke.mp3')
       demo1Shader = p.loadShader('BG/shaders/base.vert', 'BG/shaders/main.frag')
-      img = p.loadImage('BG/backdrop.jpg');
+      img = p.loadImage('BG/backdrop3.jpg');
     }
   
     p.setup = () => {
