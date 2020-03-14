@@ -110,6 +110,11 @@ export default {
     #spacer {
       height: 30%;
     }
+
+    #bg {
+      top: 90%;
+      right: 5%;
+    }
   }
 
   @media (min-width: 600px) and (max-width: 800px) {
