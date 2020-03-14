@@ -34,7 +34,7 @@ void main() {
   uv += vec2(0.5);
 
   float wave_x = sin(uv.x * u_bass + u_time) * u_mid;
-  float wave_y = sin(uv.y * u_bass / 2.0) * u_mid;
+  float wave_y = sin(uv.y * u_tremble / 2.0) * u_mid;
   vec2 d = vec2(wave_x, wave_y);
 
   vec4 image = texture2D(u_texture, uv + d);
