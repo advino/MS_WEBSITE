@@ -126,7 +126,7 @@ export default {
 
         .description-text {
             font-size: 24px;
-            width: 60%;
+            width: 70%;
         }
     }
 </style>

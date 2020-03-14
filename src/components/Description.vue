@@ -1,6 +1,8 @@
 <template>
   <div class="description-container">
+      <router-link to="/about">
       <h1 class="description-title">MIXED SIGNALS</h1>
+      </router-link>
       <span class="description-text">
         Mixed Signals is a design and technology studio 
         building digital tools to enhance live events.
