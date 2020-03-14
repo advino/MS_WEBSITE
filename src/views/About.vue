@@ -1,6 +1,6 @@
 <template>
   <div class="about-container">
-      <router-link to="/home">
+      <router-link to="/">
       <h3 class="description-title">
           ABOUT
       </h3>
