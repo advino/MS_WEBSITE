@@ -56,4 +56,7 @@ export default {
         color: #fff;
         font-family: Reader;
     }
+
+
+
 </style>
