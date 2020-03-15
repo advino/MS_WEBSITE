@@ -48,6 +48,7 @@ export default {
 
   .home-container {
       width: 100%;
+      min-height: 100%;
       height: 100%;
   }
 
@@ -67,86 +68,50 @@ export default {
 
   #spacer {
     width: 100%; 
-    height: 60%;
+    height: 50%;
   }
 
-
-    @media (min-width: 200px) and (max-width: 599px) {
-    .event-unit {
-      width: 100%;
-    }
-
+  @media (min-width: 320px) and (max-width: 425px) {
     .description-title {
-      font-size: 28px;
+      font-size: 24px;
     }
 
     .description-text {
-      font-size: 20px;
       width: 100%;
+      font-size: 20px;
     }
 
     #spacer {
       height: 30%;
     }
 
-    #bg {
-      top: 90%;
-      right: 5%;
-    }
-
-
-  }
-
-  @media (min-width: 600px) and (max-width: 800px) {
-        .description-title {
-          font-size: 32px;
-        }
-
-        .description-text {
-          font-size: 24px;
-          width: 70%;
-        }
-        .event-unit {
-          width: 33%;
-        }
-
-      #spacer {
-        height: 50%;
-      }
-
-        .navigation-container {
-          font-size: 24px;
-        }
-  }
-
-
-  @media (min-width: 700px) and (max-width: 900px) {
-    #spacer {
-      height: 50%;
-    }
-
-    .navigation-container {
-      font-size: 24px;
-    }
-  } 
-
-  @media (min-width: 1000px) and (max-width: 1100px) {
-    #spacer {
-      height: 60%;
-    }
-
-    .navigation-container {
-      font-size: 24px;
+    .event-unit {
+      width: 100%;
     }
   }
 
-  @media (min-width: 1200px) {
-    #spacer {
-      height: 65%;
+  @media (min-width: 426px) and (max-width: 768px) {
+    .description-title {
+      font-size: 36px;
     }
-    
-    .navigation-container {
+
+    .description-text {
+      width: 100%;
       font-size: 24px;
+    }
+
+    #spacer {
+      height: 50%;      
+    }
+
+    .event-unit {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1300px) {
+    #spacer {
+      height: 40%;
     }
   }
 

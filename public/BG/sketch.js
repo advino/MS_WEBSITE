@@ -12,7 +12,7 @@ const s = (p) => {
 
     p.preload = () => {
 
-      imageIdx = Math.ceil(Math.random() * 4);
+      imageIdx = Math.ceil(Math.random() * 3);
 
 
       audio = p.loadSound('BG/sounds/wav1_terekke.mp3')

@@ -16,7 +16,7 @@
           <br />
           <br />
           We asked ourselves if there was a way that the vast expanse of data emitted at these events could create a feedback loop
-          in which technology provided was a medium by which the auidence could augment their experience rather than just document it.
+          in which technology provided a medium by which the auidence could augment their experience rather than just document it.
           <br />
           <br />
           And so Mixed Signals was created. Our first product -- and flagship product -- is a visualizer for display during live events and a
