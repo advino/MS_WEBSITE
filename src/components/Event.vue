@@ -35,8 +35,7 @@ export default {
     .event-container {
         width: 100%;
         height: auto;   
-        padding: 15px;
-        padding-left: 25px;
+        padding: 10px;
 
         color: white;
         font-family: Reader;
