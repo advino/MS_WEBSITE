@@ -2,7 +2,7 @@
   <div class="about-container">
  
       <h3 class="description-title">
-          ABOUT
+          WE ARE MIXED SIGNALS
       </h3>
 
       <p class="description-text">

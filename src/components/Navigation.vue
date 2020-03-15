@@ -1,7 +1,7 @@
 <template>
   <div class="navigation-container">
       <div>
-        <div v-for="l in links" :key="l.name" style="display: inline-block; width: 10%; margin-right: 20px;">
+        <div v-for="l in links" :key="l.name" style="display: inline-block; width: 10%; margin-right: 30px;">
           <router-link :to="l.route">
             <h4 class="nav-item">
                 {{ l.name }}
@@ -49,7 +49,6 @@ export default {
         width: auto;
         height: auto;
         margin: 0;
-         
     }
 
 
