@@ -1,8 +1,6 @@
 <template>
-  <div class="description-container">
-      <router-link to="/about">
+  <div class="description-container">     
       <h1 class="description-title">MIXED SIGNALS</h1>
-      </router-link>
       <span class="description-text">
         Mixed Signals is a design and technology studio 
         building digital tools to enhance live events.
@@ -37,8 +35,7 @@ export default {
     .description-container {
         width: 100%;
         height: auto;
-        padding: 15px;
-        padding-left: 25px;
+        padding: 10px;
         overflow-y: scroll;
     }
 

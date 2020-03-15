@@ -1,14 +1,17 @@
 <template>
   <div class="site-container">
+    <Navigation></Navigation>
     <router-view></router-view>
   </div>  
 </template>
 
 <script>
-  
+  import Navigation from '@/components/Navigation.vue';
+
 
 export default {
-  components: {},
+  
+  components: {Navigation},
   props: [],
   data() {
     return {
@@ -26,6 +29,7 @@ export default {
 
   a {
     text-decoration: none;
+    color: white;
   }
   
   html{
@@ -47,8 +51,10 @@ export default {
     overflow-y: scroll;
     z-index: 10;
     opacity: 1;
-
+    padding: 10px;
     transition: opacity .6s;
   }
+  
+
 
 </style>

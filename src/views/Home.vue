@@ -70,7 +70,8 @@ export default {
     height: 60%;
   }
 
-  @media (min-width: 200px) and (max-width: 599px) {
+
+    @media (min-width: 200px) and (max-width: 599px) {
     .event-unit {
       width: 100%;
     }
@@ -92,18 +93,40 @@ export default {
       top: 90%;
       right: 5%;
     }
+
+
   }
 
   @media (min-width: 600px) and (max-width: 800px) {
+        .description-title {
+          font-size: 32px;
+        }
 
-    .event-unit {
-      width: 33%;
-    }
+        .description-text {
+          font-size: 24px;
+          width: 70%;
+        }
+        .event-unit {
+          width: 33%;
+        }
+
+      #spacer {
+        height: 50%;
+      }
+
+        .navigation-container {
+          font-size: 24px;
+        }
   }
+
 
   @media (min-width: 700px) and (max-width: 900px) {
     #spacer {
-      height: 60%;
+      height: 50%;
+    }
+
+    .navigation-container {
+      font-size: 24px;
     }
   } 
 
@@ -111,22 +134,20 @@ export default {
     #spacer {
       height: 60%;
     }
+
+    .navigation-container {
+      font-size: 24px;
+    }
   }
 
   @media (min-width: 1200px) {
     #spacer {
       height: 65%;
     }
+    
+    .navigation-container {
+      font-size: 24px;
+    }
   }
 
-  @media (min-width: 600px) and (max-width: 800px) {
-        .description-title {
-            font-size: 32px;
-        }
-
-        .description-text {
-            font-size: 24px;
-            width: 70%;
-        }
-    }
 </style>

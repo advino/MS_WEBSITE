@@ -1,10 +1,9 @@
 <template>
   <div class="about-container">
-      <router-link to="/">
+ 
       <h3 class="description-title">
           ABOUT
       </h3>
-      </router-link>
 
       <p class="description-text">
           The future of live events lies in the ability for the auidence to play a role in shaping the events experience.
