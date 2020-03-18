@@ -1,23 +1,25 @@
 <template>
   <div class="site-container">
     <Navigation></Navigation>
-    <router-view></router-view>
+    <router-view>
+
+    </router-view>
   </div>  
 </template>
 
 <script>
   import Navigation from '@/components/Navigation.vue';
 
-export default {
+  export default {
   
-  components: {Navigation},
-  props: [],
-  data() {
-    return {
+    components: { Navigation },
+    props: [],
+    data() {
+      return {
 
+      }
     }
   }
-}
 </script>
 
 <style>
@@ -57,10 +59,6 @@ export default {
     padding: 10px;
     transition: opacity .6s;
 
-    overflow: scroll;
+   
   }
-  
-
-
-
 </style>

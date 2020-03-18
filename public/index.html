@@ -31,15 +31,17 @@
 
       #canvas-container {
         
-        transition: opacity 1s;
+        transition: opacity 1s, filter 1.5s;   
       }
 
       .canvas-passive {
         opacity: 0;
+        filter: blur(10px);
       } 
 
       .canvas-active {
         opacity: 1;
+        filter: blur(0px);
 
       }
 
