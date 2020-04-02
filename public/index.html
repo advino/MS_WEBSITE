@@ -7,58 +7,6 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <style>
-
-      #app-passive {
-        opacity: 0;
-      }
-
-      #bg {
-        display: block;
-        position: fixed;
-        top: 2%;
-        right: 2%;
-        width: 45px;
-        height: 45px;
-        border-style: solid; 
-        border-radius: 100px;
-        border-color: white;
-        padding: 10px;
-        background-color: transparent;
-
-        outline: none;
-      }
-
-      #canvas-container {
-        
-        transition: opacity 1s, filter 1.5s;   
-      }
-
-      .canvas-passive {
-        opacity: 0;
-        filter: blur(10px);
-      } 
-
-      .canvas-active {
-        opacity: 1;
-        filter: blur(0px);
-
-      }
-
-      .material-icons {
-        color: white;
-      }
-
-      #on {
-        display: block;
-      }
-
-      #off {
-        display: none;
-      }
-
-    </style>
-
 
     <title>Mixed Signals Studio</title>
   </head>
@@ -70,26 +18,8 @@
     <!-- built files will be auto injected -->
 
 
-    <button id="bg">
-      <div id="on">
-        <i class="material-icons">
-          volume_up
-        </i>
-      </div>
-      <div id="off">
-        <i class="material-icons">
-          volume_off
-        </i>
-      </div>
-    </button>
-
-    <div id="canvas-container" class="canvas-passive" style="position: fixed; left: 0; top: 0; z-index: -1"></div>
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.min.js"></script>
-    <script src="BG/sketch.js"></script>
   </body>
 </html>

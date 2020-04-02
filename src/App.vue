@@ -1,18 +1,20 @@
 <template>
   <div class="site-container">
-    <Navigation></Navigation>
-    <router-view>
 
-    </router-view>
+    <Main></Main>
+    <About></About>
+    <Events></Events>
   </div>  
 </template>
 
 <script>
-  import Navigation from '@/components/Navigation.vue';
+  import Main from '@/views/Main';
+  import About from '@/views/About';
+  import Events from '@/views/Events';
 
   export default {
   
-    components: { Navigation },
+    components: { Main, About, Events },
     props: [],
     data() {
       return {
@@ -24,8 +26,21 @@
 
 <style>
 
+  @font-face {
+    font-family: Reader;
+    src: url('~@/assets/Reader-Regular.otf');
+  }
+
+  @font-face {
+    font-family: Voyage;
+    src: url('~@/assets/Voyage-Regular.otf');
+  }
+
   * {
     box-sizing: border-box;
+    cursor: crosshair;
+    text-decoration: none;
+    user-select: none;
   }
 
   a {
@@ -47,18 +62,17 @@
     height: 100%;
     padding: 0;
     margin: 0;
+    background-color: #000000;
+
   }
 
   .site-container {
     width: 100%;
     min-height: 100%;
     height: 100%;
-    overflow-y: scroll;
-    z-index: 10;
-    opacity: 1;
-    padding: 10px;
-    transition: opacity .6s;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    background-color: #000000;
 
-   
   }
 </style>
