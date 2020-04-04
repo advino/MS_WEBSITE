@@ -2,19 +2,15 @@
   <div class="site-container">
 
     <Main></Main>
-    <About></About>
-    <Events></Events>
   </div>  
 </template>
 
 <script>
   import Main from '@/views/Main';
-  import About from '@/views/About';
-  import Events from '@/views/Events';
 
   export default {
   
-    components: { Main, About, Events },
+    components: { Main },
     props: [],
     data() {
       return {
@@ -38,9 +34,7 @@
 
   * {
     box-sizing: border-box;
-    cursor: crosshair;
     text-decoration: none;
-    user-select: none;
   }
 
   a {

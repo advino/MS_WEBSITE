@@ -3,36 +3,68 @@
     <div class="bg" :class="{'image-hover': hover}" :style="{backgroundImage: changeBG}"> 
 
     </div>
-    <div style="position: relative; width: 95%; margin: auto; margin-bottom: 60px; padding: 30px; padding-top: 70px; z-index: 1;">
-        <span :class="{'text-hover': hover}" class="main-text">
-            Mixed Signals is a design and technology studio
-        </span>
-        <span :class="{'text-hover': hover && count !== 0}" class="main-text" @mouseover="showImage(0)" @mouseout="toggleHover">
-            {{ option[0] }},
-        </span>
-        <span :class="{'text-hover': hover && count !== 1}" class="main-text" @mouseover="showImage(1)" @mouseout="toggleHover">
-            {{ option[1] }},
-        </span>
-        <span :class="{'text-hover': hover && count !== 2}" class="main-text" @mouseover="showImage(2)" @mouseout="toggleHover">
-            {{ option[2] }}
-        </span>
+    <div class="info-container">
+        <div class="quarter">
+            <h1 class="studio-title">Mixed Signals</h1>
+            <span class="studio-blurb">
+                Design and technology studio
+            </span>
+            <span class="studio-links" @click="showImage(0)" >
+                {{option[0]}} →
+            </span>
+            <span class="studio-links" @click="showImage(1)" >
+                {{option[1]}} →
+            </span>
+            <span class="studio-links" @click="showImage(2)" >
+                {{option[2]}} →
+            </span>
+        </div>
+        <div style="width: 5%; height: 100%;">
+
+        </div>
+        <div class="quarter">
+            <h1 class="studio-title">About</h1>
+            <span class="studio-about">
+                The future of live events lies in the ability for the auidence to play a role in shaping the event's experience.
+                <br />
+                <br />
+                We asked ourselves if there was a way that the vast expanse of data emitted at these events could create a feedback loop in which technology provided a medium by which the auidence could augment their experience rather than just document it.
+            </span>
+        </div>
+        <div style="width: 5%; height: 100%;">
+
+        </div>
+        <div class="quarter">
+            <span class="studio-events">
+                <h1 class="studio-title">Events</h1>
+                <div v-for="e in events" :key="e.info">
+                    <Item :data="e"></Item>
+                </div>
+            </span>           
+        </div>
+        <div style="width: 5%; height: 100%;">
+
+        </div>
+        <div class="quarter">
+            <h1 class="studio-title">Contact</h1>
+        </div>
     </div>
-    <!-- <img  class="about-image" style="" :src="bgs[count].toString()"> -->
-    <!-- <img v-if="count == 1 && hover" class="about-image" style="" src="~@/assets/backdrop2.jpg"> -->
-    <!-- <img v-if="count == 2 && hover" class="about-image" style="" src="~@/assets/backdrop3.jpg"> -->
   </div>
 </template>
 
 <script>
+
+    import Item from '@/components/Item';
+
 export default {
-    component: {},
+    components: { Item },
     props: ['url'],
     data() {
         return {
             option: [
-                "creating audio-visual tools",
-                "hosting live experiences",
-                "building digital communities"
+                "audio-visual tools",
+                "live experiences",
+                "digital communities"
             ],
             bgs: [
                 require("@/assets/flowers_1.jpg"),
@@ -40,7 +72,24 @@ export default {
                 require("@/assets/backdrop3.jpg")
             ],
             count: 0,
-            hover: false
+            hover: false,
+            events: [
+                {
+                    info: "Online // April 2020",
+                    title: "Mixed Signals Listening Party",
+                    copy: "Coming Soon!"
+                },
+                {
+                    info: "Brooklyn, NYC // Feb 2020",
+                    title: "Short Circut",
+                    copy: "A collaboration with Brooklyn based DJ collective, Short Circut. We demoed our updated experience to an auidence of over 300 people."
+                },
+                {
+                    info: "Providence, RI // May 2019",
+                    title: "Rave in the Commons",
+                    copy: "Mixed Signals first event. An interactive experience featuring DJ Brutalist Ikea, DJ Daddy Long Legs, and DJ Mister World Wides."
+                }
+            ]
         }
     },
     computed: {
@@ -67,19 +116,10 @@ export default {
         width: 100%;
         min-height: 100%;
         height: 100%;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
         font-family: Reader;
-        border-bottom-style: solid;
+        color: white;
         background-color: black;
         overflow: scroll;
-    }
-
-    .mission {
-        padding: 20px;
-        font-size: 120px;
-        border: solid black;
-        border-radius: 100px;
     }
 
     .bg {
@@ -87,42 +127,57 @@ export default {
         top: 0;
         left: 0;
         width: 100%;
+        min-height: 100%;
         height: 100%;
-        /* background-color: black; */
         background-size: cover;
         background-position: center;
-        background-image: url('~@/assets/cds_2.jpg');
-        filter: blur(50px);
+        filter: blur(25px);
         z-index: 0;
-
-        transition: background-image .75s, filter .75s;
+        transition: background-image linear .25s, filter .75s;
     }
 
-
-    .about-image {
-        position: absolute;
-        max-width: 700px;
-        height: auto;
-        top: 50%;
-        left: 60%;
-        z-index: 3;
+    .info-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding: 25px;
+        z-index: 1;
     }
 
-    .main-text {
-        display: block; 
-        margin: auto; 
-        text-align: left; 
-        color: white; 
-        font-size: 140px; 
-        opacity: 1; 
-        transition: opacity .75s;
+    .quarter {
+        width: 25%;
+        height: 100%;
     }
 
-    .image-hover {
-        filter: blur(0);
+    .half {
+        width: 50%;
+        height: 100%;
     }
 
-    .text-hover {
-        opacity: .1;
+    .studio-title {
+        margin: 0;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .studio-blurb {
+        display: inline-block;
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .studio-links {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 20px;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .studio-about {
+        font-size: 20px;
     }
 </style>

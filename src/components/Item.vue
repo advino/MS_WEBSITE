@@ -1,7 +1,7 @@
 <template>
   <div class="item-container">
       <h5>{{ data.info }}</h5>
-      <h2>{{ data.title }}</h2>
+      <h2 class="event-title">{{ data.title }}</h2>
       <p>
           {{ data.copy }}
       </p>
@@ -10,6 +10,7 @@
 
 <script>
 export default {
+    name: 'Item',
     components: {},
     props: ['data'],
     data() {
@@ -22,9 +23,16 @@ export default {
 
 <style>
     .item-container {
-        max-width: 400px;
-        margin-right: 50px;
+        width: 100%;
         color: white;
+        margin-bottom: 60px;
+    }
 
+    .event-title {
+        text-decoration: underline;
+    }
+
+    .event-title:after {
+        content: ' ↗';
     }
 </style>
