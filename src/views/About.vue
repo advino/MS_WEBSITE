@@ -1,20 +1,29 @@
 <template>
     <div class="about-container">
-        <div style="width: 80%; padding: 60px; color: white;">
-            <span style="display: block; margin: auto; font-size: 60px; font-family: Reader;">
-                The future of live events lies in the ability for the auidence to play a role in shaping the event's experience.
-                <br />
-                <br />
-                <!-- Our phones have given us the ability to document, share, and respond to a myriad of real-time events through a variety of platforms.
-                <br />
-                <br /> -->
-                We asked ourselves if there was a way that the vast expanse of data emitted at these events could create a feedback loop in which technology provided a medium by which the auidence could augment their experience rather than just document it.
-                <br />
-                <br />
-
-                And so Mixed Signals was created. 
-            </span>
+        <div class="about-image">
+            <img src="~@/assets/facelogo-03.png" alt="" class="ms-logo">
         </div>
+        <div class="about-text">
+            <div class="about-col">
+                <h1 class="about-title">Mixed Signals</h1>
+                <h1 class="about-body">
+                    DESIGN AND TECHNOLOGY STUDIO CREATING <span class="">DIGITAL TOOLS</span> FOR LIVE EXPERIENCES
+                </h1>
+
+            </div>
+
+            <div class="about-col">
+                <h1 class="about-title">Coming Soon</h1>
+                <h1 class="about-body">
+                    MIXED SIGNALS ONLINE
+                    <br />
+                    APRIL 18th @ 10PM
+
+                </h1>
+            </div>
+            
+        </div>
+        
     </div>
 </template>
 
@@ -29,10 +38,80 @@ export default {
         width: 100%;
         min-height: 100%;
         height: 100%;
-        background-size: cover;
-        background-position: center;
-        /* background-image: url('~@/assets/backdrop1.jpg'); */
+        padding: 10px;
         scroll-snap-align: start;
-        scroll-snap-stop: always;    
+        scroll-snap-stop: always;
+        z-index: 0;
     }
+
+    .about-image {
+        position: relative;
+        width: 100%;
+        height: 75%;
+        margin: auto;
+        margin-bottom: 30px;
+        background-position: center;
+        background-size: cover;
+        background-image: url('~@/assets/backdrop2.jpg');
+    }
+
+    .about-text {
+        display: flex;
+        width: 100%;
+        height: 25%;
+        justify-content: space-between;
+    }
+
+    .about-col {
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+    }
+
+    .about-title {
+        display: block;
+        margin: 0;
+        margin-bottom: 20px;
+        font-size: 56px;
+        font-family: Maison Neue;
+        font-weight: 400;
+        letter-spacing: -2px;
+        line-height: 64px;
+        color: black;
+    }
+
+    .about-body {
+        max-width: 70%;
+        height: 100%;
+        display: block;
+        margin: 0;
+        font-size: 36px;
+        font-family: Maison Neue;
+        font-weight: 400;
+        letter-spacing: -1.0x;
+        line-height: auto;
+        color: black;
+    }
+    .about-highlight {
+        
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        background-color: black;
+        border: solid black 2px;
+        border-radius: 100px;
+        line-height: 0;;
+        color: white;
+    }
+
+    .ms-logo {
+        position: absolute;
+        width: 75px;
+        height: auto;
+        bottom: 20px;
+        right: 20px;
+    }
+
+
 </style>

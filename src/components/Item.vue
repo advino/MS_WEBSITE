@@ -1,8 +1,8 @@
 <template>
   <div class="item-container">
-      <h5>{{ data.info }}</h5>
-      <h2 class="event-title">{{ data.title }}</h2>
-      <p>
+      <h5 class="event-info">{{ data.info }}</h5>
+      <h2 class="event-title">{{ data.title }} ↗</h2>
+      <p class="event-description">
           {{ data.copy }}
       </p>
   </div>
@@ -23,16 +23,30 @@ export default {
 
 <style>
     .item-container {
-        width: 100%;
-        color: white;
+        width: 80%;
+        color: black;
         margin-bottom: 60px;
     }
 
+    .event-info {
+        font-size: 16px;
+        margin: 0;
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+
     .event-title {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 400;
+        color: black;
         text-decoration: underline;
     }
 
-    .event-title:after {
-        content: ' ↗';
+    .event-description {
+        margin: 0;
+        color: black;
+        font-size: 20px;
     }
 </style>
