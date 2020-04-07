@@ -1,16 +1,19 @@
 <template>
   <div class="site-container">
 
+    
+    <About></About>
     <Main></Main>
   </div>  
 </template>
 
 <script>
   import Main from '@/views/Main';
+  import About from '@/views/About';
 
   export default {
   
-    components: { Main },
+    components: { Main, About },
     props: [],
     data() {
       return {
@@ -30,6 +33,11 @@
   @font-face {
     font-family: Voyage;
     src: url('~@/assets/Voyage-Regular.otf');
+  }
+
+  @font-face {
+    font-family: Maison Neue;
+    src: url('~@/assets/MaisonNeue-Book.ttf');
   }
 
   * {
@@ -61,12 +69,16 @@
   }
 
   .site-container {
+    position: relative;
     width: 100%;
     min-height: 100%;
     height: 100%;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    background-color: #000000;
+    background-color: lightgrey;
 
   }
+
+
 </style>
