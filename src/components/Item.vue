@@ -1,7 +1,7 @@
 <template>
   <div class="item-container">
       <h5 class="event-info">{{ data.info }}</h5>
-      <h2 class="event-title">{{ data.title }} ↗</h2>
+      <h2 @mouseover="toggleHovered" @mouseout="toggleHovered" class="event-title">{{ data.title }} ↗</h2>
       <p class="event-description">
           {{ data.copy }}
       </p>
@@ -16,6 +16,11 @@ export default {
     data() {
         return {
 
+        }
+    },
+    methods: {
+        toggleHovered() {
+            this.$emit('hovered');
         }
     }
 }
@@ -40,13 +45,11 @@ export default {
         margin-bottom: 10px;
         font-size: 20px;
         font-weight: 400;
-        color: black;
         text-decoration: underline;
     }
 
     .event-description {
         margin: 0;
-        color: black;
         font-size: 20px;
     }
 </style>

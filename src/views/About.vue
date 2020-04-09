@@ -7,7 +7,7 @@
             <div class="about-col">
                 <h1 class="about-title">Mixed Signals</h1>
                 <h1 class="about-body">
-                    DESIGN AND TECHNOLOGY STUDIO CREATING <span class="">DIGITAL TOOLS</span> FOR LIVE EXPERIENCES
+                   Design and technology studio creating <span class="">digital tools</span> for live experiences.
                 </h1>
 
             </div>
@@ -15,10 +15,9 @@
             <div class="about-col">
                 <h1 class="about-title">Coming Soon</h1>
                 <h1 class="about-body">
-                    MIXED SIGNALS ONLINE
+                    Mixed Signals Online
                     <br />
-                    APRIL 18th @ 10PM
-
+                    April 18th @ 10PM
                 </h1>
             </div>
             
@@ -71,8 +70,8 @@ export default {
     .about-title {
         display: block;
         margin: 0;
-        margin-bottom: 20px;
-        font-size: 56px;
+        margin-bottom: 10px;
+        font-size: 64px;
         font-family: Maison Neue;
         font-weight: 400;
         letter-spacing: -2px;

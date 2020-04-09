@@ -2,12 +2,12 @@
   <div class="main-container">
     
     <div class="info-container">
-        <img src="~@/assets/jupiter.png" alt="" class="render">
+        <img  v-if="hover" src="~@/assets/jupiter.png" alt="" class="render">
 
         <div class="quarter">
             <h1 class="studio-title">Mixed Signals</h1>
             <span class="studio-blurb">
-                Design and technology studio based in New York & San Francisco
+                Design and technology studio based in New York & San Francisco.
             </span>
         </div>
 
@@ -23,29 +23,28 @@
             </span>
 
             <h1 class="studio-title">Team</h1>
-            <span style="display: block; width: 75%; font-size: 20px; margin-bottom: 15px; ">Danielle Moalem <br/> Creative Direction & Marketing</span>
+            <span style="display: block; width: 75%; font-size: 20px; margin-bottom: 15px; ">Danielle Moalem <br/> Creative Direction & Partnerships</span>
             <span style="display: block; width: 75%; font-size: 20px; margin-bottom: 15px; ">Advait Kalakkad <br/> Product & UX</span>
-
         </div>
 
         <div class="quarter">
             <span class="studio-events">
                 <h1 class="studio-title">Events</h1>
                 <div v-for="e in events" :key="e.info">
-                    <Item :data="e"></Item>
+                    <Item @hovered="toggleHover" :data="e"></Item>
                 </div>
             </span>           
         </div>
 
         <div class="quarter">
             <h1 class="studio-title">Contact</h1>
-            <span class="studio-links">Instagram</span>
             <span class="studio-links">Email</span>
-            <span class="studio-links">Press</span>
-            <span class="studio-links">Twitter</span>
-
-
+            <span class="studio-links"><a target="_blank" href="https://twitter.com/MixedSignals_19"> Archive</a> </span>
         </div>
+
+    </div>
+    <div class="legal-container">
+        <span>© Copyright Mixed Signals LLC</span>
     </div>
   </div>
 </template>
@@ -75,17 +74,17 @@ export default {
                 {
                     info: "Online // April 2020",
                     title: "Mixed Signals Listening Party",
-                    copy: "Coming Soon!"
+                    copy: "Coming Soon."
                 },
                 {
                     info: "Brooklyn, NYC // Feb 2020",
-                    title: "Short Circut",
-                    copy: "A collaboration with Brooklyn based DJ collective. We demoed our updated experience to an auidence of over 300 people."
+                    title: "Short Circuit",
+                    copy: "A collaboration with Brooklyn based DJ collective. We demoed our updated experience to an audience of over 300 people."
                 },
                 {
                     info: "Providence, RI // May 2019",
                     title: "Rave in the Commons",
-                    copy: "Mixed Signals first event. An interactive experience featuring DJ Brutalist Ikea, DJ Daddy Long Legs, and DJ Mister World Wides."
+                    copy: "Mixed Signals first event. An interactive experience featuring DJ Brutalist Ikea, DJ Daddy Long Legs, and DJ Mister Worldwides."
                 }
             ]
         }
@@ -120,7 +119,6 @@ export default {
         overflow-y: hidden;
         scroll-snap-align: start;
         scroll-snap-stop: always;
-        /* z-index: 3; */
     }
 
     .info-container {
@@ -128,18 +126,29 @@ export default {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        height: 100%;
+        height: 95%;
         padding: 10px;
         padding-top: 30px;
-        z-index: 0;
-        background-color: lightgray;
+        background-color: lightgrey;
 
+    }
+
+    .legal-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 5%;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        font-family: Maison Neue;
+        font-size: 20px;
     }
 
     .quarter {
         width: 25%;
         height: 100%;
-        z-index: 6;
     }
 
     .half {
@@ -152,8 +161,6 @@ export default {
         margin-bottom: 20px;
         font-size: 36px;
         font-weight: 400;
-        /* background-color: #000; */
-         mix-blend-mode: difference;
 
     }
 
@@ -162,7 +169,6 @@ export default {
         width: 75%;
         font-size: 20px;
         margin-bottom: 24px;
-         mix-blend-mode: difference;
 
     }
 
@@ -173,7 +179,6 @@ export default {
         text-decoration: underline;
         cursor: pointer;
         color: black;
-         mix-blend-mode: difference;
 
     }
 
@@ -184,19 +189,20 @@ export default {
         margin-bottom: 40px;;
     }
 
-  @keyframes render-rotate {
+  /* @keyframes render-rotate {
     from {transform: rotate(0);}
     to {transform: rotate(360deg);}
-  }
+  } */
 
 
     .render {
         position: absolute;
-        width: 1100px;
+        width: 600px;
         height: auto;
-        bottom: -100px;
-        left: -200px;
+        top: 50%;
+        left: 50%;
         animation: render-rotate 40s linear infinite;
-        z-index: 0;
+        z-index: 100;
+        transform: translate(-50%, -50%);
     }
 </style>
