@@ -2,11 +2,11 @@
   <div class="main-container">
     
     <div class="info-container">
-        <img  v-if="hover" src="~@/assets/jupiter.png" alt="" class="render">
+        <!-- <img  v-if="hover" src="~@/assets/jupiter.png" alt="" class="render"> -->
 
         <div class="quarter">
             <h1 class="studio-title">Mixed Signals</h1>
-            <span class="studio-blurb">
+            <span class="studio-about">
                 Design and technology studio based in New York & San Francisco.
             </span>
         </div>
@@ -23,8 +23,8 @@
             </span>
 
             <h1 class="studio-title">Team</h1>
-            <span style="display: block; width: 75%; font-size: 20px; margin-bottom: 15px; ">Danielle Moalem <br/> Creative Direction & Partnerships</span>
-            <span style="display: block; width: 75%; font-size: 20px; margin-bottom: 15px; ">Advait Kalakkad <br/> Product & UX</span>
+            <span class="studio-about">Danielle Moalem <br/> Creative Direction & Partnerships</span>
+            <span class="studio-about">Advait Kalakkad <br/> Product & UX</span>
         </div>
 
         <div class="quarter">
@@ -128,7 +128,6 @@ export default {
         width: 100%;
         height: 95%;
         padding: 10px;
-        padding-top: 30px;
         background-color: lightgrey;
 
     }
@@ -164,14 +163,6 @@ export default {
 
     }
 
-    .studio-blurb {
-        display: inline-block;
-        width: 75%;
-        font-size: 20px;
-        margin-bottom: 24px;
-
-    }
-
     .studio-links {
         display: block;
         margin-bottom: 10px;
@@ -186,14 +177,7 @@ export default {
         display: inline-block;
         width: 75%;
         font-size: 20px;
-        margin-bottom: 40px;;
     }
-
-  /* @keyframes render-rotate {
-    from {transform: rotate(0);}
-    to {transform: rotate(360deg);}
-  } */
-
 
     .render {
         position: absolute;
@@ -204,5 +188,66 @@ export default {
         animation: render-rotate 40s linear infinite;
         z-index: 100;
         transform: translate(-50%, -50%);
+    }
+
+
+    @media (min-width: 320px) and (max-width: 425px) {
+
+        .main-container {
+            height: auto;
+            overflow-y: scroll;
+        }
+
+        .info-container {
+            flex-direction: column;
+            justify-content: flex-start;
+            
+        }
+
+        .quarter {
+            width: 100%;
+            height: auto;
+            margin-bottom: 25px;
+        }
+        
+        .studio-title {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 10px;
+        }
+
+        .studio-about {
+            width: 100%;
+            font-size: 18px;
+        }
+    }
+
+    @media (min-width: 426px) and (max-width: 768px) {
+        .main-container {
+            min-height: 100%;
+            overflow-y: scroll;
+        }
+
+        .info-container {
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .quarter {
+            width: 50%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        .studio-title {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .studio-about {
+            width: 90%;
+
+        }
     }
 </style>

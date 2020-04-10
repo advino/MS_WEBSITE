@@ -37,7 +37,7 @@ export default {
         font-size: 16px;
         margin: 0;
         margin-bottom: 10px;
-        font-weight: 400;
+        font-weight: 700;
     }
 
     .event-title {
@@ -51,5 +51,27 @@ export default {
     .event-description {
         margin: 0;
         font-size: 20px;
+    }
+
+
+    @media (min-width: 320px) and (max-width: 425px) {
+        .item-container {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .event-info {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .event-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .event-description {
+            font-size: 18px
+        }
     }
 </style>
