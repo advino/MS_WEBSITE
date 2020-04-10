@@ -17,7 +17,7 @@
                 The future of live events lies in the ability for the auidence to play a role in shaping the event's experience.
                 <br />
                 <br />
-                We leverage the data created in live space to create tools the audience can use to contribute to their shared experience.
+                We leverage the data created in live spaces to develop tools audiences can use to contribute to their shared experience.
                 <br />
                 <br />
             </span>
@@ -143,7 +143,7 @@ export default {
         background-color: black;
         color: white;
         font-family: Maison Neue;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .quarter {
