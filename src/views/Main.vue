@@ -24,6 +24,9 @@
 
             <h1 class="studio-title">Team</h1>
             <span class="studio-about">Danielle Moalem <br/> Creative Direction & Partnerships</span>
+            <br />
+
+            <br />
             <span class="studio-about">Advait Kalakkad <br/> Product & UX</span>
         </div>
 
@@ -44,7 +47,7 @@
 
     </div>
     <div class="legal-container">
-        <span>© Copyright Mixed Signals LLC</span>
+        <span>Copyright © 2020 Mixed Signals LLC, All rights reserved.</span>
     </div>
   </div>
 </template>
@@ -91,13 +94,14 @@ export default {
     },
     computed: {
         changeBG() {
+            
             return 'url(' + this.bgs[this.count] + ')';
         }
     },
     methods: {
         showImage(c) {
-            this.count = c;
 
+            this.count = c;
             this.toggleHover();
         },
         toggleHover() {
@@ -128,6 +132,7 @@ export default {
         width: 100%;
         height: 95%;
         padding: 10px;
+        padding-top: 30px;
         background-color: lightgrey;
 
     }
