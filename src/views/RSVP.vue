@@ -13,7 +13,7 @@
                 This is a space to be connected. Not just through music but through a shared experience during a time when each of us is isolated from the other. 
                 <br>
                 <br>
-                Set times will start promptly at 10:00PM EST and the livestream will end at 1:00AM EST. Visuals are done in collaboration with @oyl3.
+                Set times will start promptly at 10:00PM EST and the livestream will end at 1:00AM EST. Visuals are done in collaboration with Oyl.
                 <br>
                 <br>
                 To stay updated on event details and to recieve a link to join the party, register with your name and email.
@@ -109,6 +109,7 @@
         justify-content: flex-start; 
         width: 100%; 
         height: 100%;
+
     }
 
     .rsvp-active {
@@ -124,6 +125,7 @@
     .rsvp-form {
         width: 100%;
         height: auto;
+        margin-bottom: 30px;
     }
 
     .rsvp-input {
@@ -153,6 +155,7 @@
 
     .vlp-set {
         width: 60%;
+        margin-top: 20px;
     }
 
     @media (min-width: 320px) and (max-width: 425px) {

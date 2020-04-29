@@ -68,7 +68,7 @@ export default {
                 {
                     info: "Virtual Listening Party // May 2020",
                     title: "Mixed Signals Listening Party",
-                    copy: "An online audio-visual experience. Featuring sets from Callie Reiff, Wig-Wam, and Dreamhaus Misha.\n Visuals created in collaboration with @oyl3."
+                    copy: "An online audio-visual experience. Featuring sets from Callie Reiff, Wig-Wam, and Dreamhaus Misha.\n Visuals created in collaboration with Oyl."
                 },
                 {
                     info: "Brooklyn, NYC // Feb 2020",

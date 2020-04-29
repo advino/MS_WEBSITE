@@ -71,7 +71,7 @@ export default {
         margin-bottom: 30px;
         background-position: center;
         background-size: cover;
-        background-image: url('~@/assets/2(smaller).gif');
+        background-image: url('~@/assets/one.gif');
     }
 
     .about-text {
