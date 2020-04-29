@@ -42,7 +42,7 @@
 
         <div class="quarter">
             <h1 class="studio-title">Contact</h1>
-            <span class="studio-links">Email</span>
+            <span class="studio-links"><a href="mailto:hello@mixedsignals.studio">Email</a></span>
             <span class="studio-links"><a target="_blank" href="https://twitter.com/MixedSignals_19"> Archive</a> </span>
         </div>
 
