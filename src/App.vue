@@ -1,24 +1,29 @@
 <template>
-  <div class="site-container">
-
-    
-    <About></About>
+  <div class="site-container">  
+    <About @toggle="toggleRSVP"></About>
     <Main></Main>
+    <RSVP @sent="toggleRSVP" :state="rsvpState"></RSVP>
   </div>  
 </template>
 
 <script>
   import Main from '@/views/Main';
   import About from '@/views/About';
+  import RSVP from '@/views/RSVP.vue';
 
   export default {
   
-    components: { Main, About },
+    components: { Main, About, RSVP },
     props: [],
     data() {
       return {
-
+        rsvpState: false
       }
+    },
+    methods: {
+        toggleRSVP() {
+            this.rsvpState = !this.rsvpState;
+        }
     }
   }
 </script>
@@ -28,11 +33,6 @@
   @font-face {
     font-family: Reader;
     src: url('~@/assets/Reader-Regular.otf');
-  }
-
-  @font-face {
-    font-family: Voyage;
-    src: url('~@/assets/Voyage-Regular.otf');
   }
 
   @font-face {
@@ -77,8 +77,12 @@
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     background-color: lightgrey;
-
   }
 
+  @media (min-width: 320px) and (max-width: 425px)  {
+    .site-container {
+      scroll-snap-type: none;
+    }
+  }
 
 </style>

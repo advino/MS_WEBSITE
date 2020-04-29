@@ -15,20 +15,39 @@
             <div class="about-col">
                 <h1 class="about-title">Coming Soon</h1>
                 <h1 class="about-body">
-                    Mixed Signals Online
+                    Mixed Signals Virtual Listening Party
                     <br />
-                    April 18th @ 10PM
+                    May 2, 2020 @ 10PM EST
                 </h1>
+                <div style="display: flex; justify-content: space-between; width: 100%; ">
+                <button @click="relay" class='about-button'>RSVP HERE</button>
+
+                <span style="display: block; block; font-size: 56px; color: black;" class="material-icons">
+                    arrow_downward
+                </span>
+                </div>
+
             </div>
             
         </div>
-        
     </div>
 </template>
 
 <script>
+    
 export default {
-
+    components: {},
+    props: [],
+    data() {
+        return {
+            
+        }
+    },
+    methods: {
+        relay() {
+            this.$emit('toggle');
+        }
+    }
 }
 </script>
 
@@ -41,6 +60,7 @@ export default {
         scroll-snap-align: start;
         scroll-snap-stop: always;
         z-index: 0;
+
     }
 
     .about-image {
@@ -51,7 +71,7 @@ export default {
         margin-bottom: 30px;
         background-position: center;
         background-size: cover;
-        background-image: url('~@/assets/backdrop2.jpg');
+        background-image: url('~@/assets/2(smaller).gif');
     }
 
     .about-text {
@@ -65,7 +85,7 @@ export default {
     .about-col {
         display: block;
         width: 100%;
-        height: 100%;
+        height: auto;
     }
 
     .about-title {
@@ -82,15 +102,31 @@ export default {
 
     .about-body {
         max-width: 70%;
-        height: 100%;
+        height: auto;
         display: block;
         margin: 0;
+        margin-bottom: 20px;
         font-size: 36px;
         font-family: Maison Neue;
         font-weight: 400;
         letter-spacing: -1.0x;
         line-height: auto;
         color: black;
+    }
+
+
+    .about-button {
+        display: block;
+        width: 30%;
+        height: auto;
+        padding: 15px;
+        background-color: transparent;
+        border: solid black 2px;
+        border-radius: 40px;
+        font-family: Maison Neue;
+        font-size: 28px;
+        outline: none;
+        cursor: pointer;
     }
 
     .ms-logo {
@@ -103,7 +139,7 @@ export default {
 
     @media (min-width: 320px) and (max-width: 425px)  {
         .about-image {
-            height: 60%;
+            height: 50%;
             margin-bottom: 10px;
         }
         .about-text {
@@ -115,18 +151,25 @@ export default {
         .about-col {
             width: 100%;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
         }
 
         .about-title {
-            font-size: 36px;
-            line-height: 48px;
+            font-size: 30px;
+            line-height: 36px;
             margin-bottom: 0px;
         }
 
         .about-body {
             max-width: 100%;
             font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .about-button {
+            width: 50%;
+            padding: 10px;
+            font-size: 20px;
         }
 
         .ms-logo {
@@ -162,6 +205,11 @@ export default {
             font-size: 28px;
         }
 
+        .about-button {
+            width: 50%;
+            font-size: 24px;
+        }
+
         .ms-logo {
             width: 56px;
         }
@@ -169,7 +217,7 @@ export default {
 
     @media (min-width: 769px) and (max-width: 1024px) {
         .about-image {
-            height: 70%;
+            height: 60%;
             margin-bottom: 25px;
         }
 
@@ -186,8 +234,8 @@ export default {
         }
 
         .about-title {
-            font-size: 56px;
-            line-height: 64px;
+            font-size: 48px;
+            line-height: 56px;
             margin-bottom: 10px;
         }
 
@@ -196,6 +244,11 @@ export default {
             font-size: 32px;
         }  
 
+        .about-button {
+            width: 40%;
+            font-size: 24px;
+        }
+
         .ms-logo {
             width: 64px;
         }
@@ -203,7 +256,7 @@ export default {
 
     @media (min-width: 1025px) and (max-width: 1440px) {
         .about-image {
-            height: 70%;
+            height: 65%;
             margin-bottom: 20px;
         }
 
@@ -220,15 +273,20 @@ export default {
         }
 
         .about-title {
-            font-size: 60px;
-            line-height: 76px;
+            font-size: 48px;
+            line-height: 56px;
             margin-bottom: 5px;
         }
 
         .about-body {
             max-width: 90%;
-            font-size: 36px;
-            line-height: 44px;
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        .about-button {
+            width: 30%;
+            font-size: 24px;
         }
 
         .ms-logo {

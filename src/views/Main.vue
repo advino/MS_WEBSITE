@@ -2,7 +2,6 @@
   <div class="main-container">
     
     <div class="info-container">
-        <!-- <img  v-if="hover" src="~@/assets/jupiter.png" alt="" class="render"> -->
 
         <div class="quarter">
             <h1 class="studio-title">Mixed Signals</h1>
@@ -14,20 +13,22 @@
         <div class="quarter">
             <h1 class="studio-title">About</h1>
             <span class="studio-about">
-                The future of live events lies in the ability for the auidence to play a role in shaping the event's experience.
+                The future of live events lies in the ability for the audience to play a role in shaping the event's experience.
                 <br />
                 <br />
-                We leverage the data created in live spaces to develop tools audiences can use to contribute to their shared experience.
+                We leverage the data created in live spaces to develop tools audiences can use to contribute to their shared environment.
                 <br />
                 <br />
             </span>
 
             <h1 class="studio-title">Team</h1>
-            <span class="studio-about">Danielle Moalem <br/> Creative Direction & Partnerships</span>
+            <span style="text-decoration: underline;" class="studio-about"><a target="_blank" href="https://daniellemoalem.com/">Danielle Moalem</a></span>
+            <span class="studio-about">Creative Direction & Partnerships</span>
             <br />
 
             <br />
-            <span class="studio-about">Advait Kalakkad <br/> Product & UX</span>
+            <span style="text-decoration: underline;" class="studio-about"><a target="_blank" href="https://radvait.com">Advait Kalakkad</a></span> 
+            <span class="studio-about">Product & UX</span>
         </div>
 
         <div class="quarter">
@@ -47,7 +48,7 @@
 
     </div>
     <div class="legal-container">
-        <span>Copyright © 2020 Mixed Signals LLC, All rights reserved.</span>
+        <span>Copyright © 2020 Mixed Signals Studio, All rights reserved.</span>
     </div>
   </div>
 </template>
@@ -61,23 +62,13 @@ export default {
     props: ['url'],
     data() {
         return {
-            option: [
-                "audio-visual tools",
-                "live experiences",
-                "digital communities"
-            ],
-            bgs: [
-                require("@/assets/flowers_1.jpg"),
-                require("@/assets/backdrop2.jpg"),
-                require("@/assets/backdrop3.jpg")
-            ],
             count: 0,
             hover: false,
             events: [
                 {
-                    info: "Online // April 2020",
+                    info: "Virtual Listening Party // May 2020",
                     title: "Mixed Signals Listening Party",
-                    copy: "Coming Soon."
+                    copy: "An online audio-visual experience. Featuring sets from Callie Reiff, Wig-Wam, and Dreamhaus Misha.\n Visuals created in collaboration with @oyl3."
                 },
                 {
                     info: "Brooklyn, NYC // Feb 2020",
@@ -122,7 +113,8 @@ export default {
         background-color: lightgrey;
         overflow-y: hidden;
         scroll-snap-align: start;
-        scroll-snap-stop: always;
+        /* scroll-snap-stop: always; */
+
     }
 
     .info-container {
@@ -134,7 +126,14 @@ export default {
         padding: 10px;
         padding-top: 30px;
         background-color: lightgrey;
+        overflow-y: scroll;
+    }
 
+    .register-container {
+        width: 100%;
+        height: 35%;
+        padding: 10px;
+        background-color: lightgrey;
     }
 
     .legal-container {
@@ -161,11 +160,12 @@ export default {
     }
 
     .studio-title {
+        display: block;
         margin: 0;
         margin-bottom: 20px;
         font-size: 36px;
         font-weight: 400;
-
+        line-height: 40px;
     }
 
     .studio-links {
@@ -179,9 +179,10 @@ export default {
     }
 
     .studio-about {
-        display: inline-block;
+        display: block;
         width: 75%;
         font-size: 20px;
+        line-height: 26px;
     }
 
     .render {
@@ -200,13 +201,13 @@ export default {
 
         .main-container {
             height: auto;
-            overflow-y: scroll;
+            overflow-y: hidden;
         }
 
         .info-container {
             flex-direction: column;
             justify-content: flex-start;
-            
+            overflow-y: scroll;
         }
 
         .quarter {
@@ -231,6 +232,7 @@ export default {
         .main-container {
             min-height: 100%;
             overflow-y: scroll;
+
         }
 
         .info-container {

@@ -1,7 +1,7 @@
 <template>
   <div class="item-container">
       <h5 class="event-info">{{ data.info }}</h5>
-      <h2 @mouseover="toggleHovered" @mouseout="toggleHovered" class="event-title">{{ data.title }} ↗</h2>
+      <h2 @mouseover="toggleHovered" @mouseout="toggleHovered" class="event-title">{{ data.title }}</h2>
       <p class="event-description">
           {{ data.copy }}
       </p>
@@ -44,13 +44,14 @@ export default {
         margin: 0;
         margin-bottom: 10px;
         font-size: 20px;
-        font-weight: 400;
-        text-decoration: underline;
+        font-weight: 600;
+        /* text-decoration: underline;s */
     }
 
     .event-description {
         margin: 0;
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 22px;
     }
 
 
@@ -71,7 +72,8 @@ export default {
         }
         
         .event-description {
-            font-size: 18px
+            font-size: 18px;
+            line-height: 24px;
         }
     }
 </style>
