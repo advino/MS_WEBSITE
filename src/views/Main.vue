@@ -66,8 +66,8 @@ export default {
             hover: false,
             events: [
                 {
-                    info: "Virtual Listening Party // May 2020",
-                    title: "Mixed Signals Listening Party",
+                    info: "Online // May 2020",
+                    title: "Mixed Signals Virtual Listening Party",
                     copy: "An online audio-visual experience. Featuring sets from Callie Reiff, Wig-Wam, and Dreamhaus Misha.\n Visuals created in collaboration with Oyl."
                 },
                 {
@@ -113,8 +113,6 @@ export default {
         background-color: lightgrey;
         overflow-y: hidden;
         scroll-snap-align: start;
-        /* scroll-snap-stop: always; */
-
     }
 
     .info-container {
