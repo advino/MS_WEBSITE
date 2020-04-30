@@ -8,7 +8,6 @@
         </div>
         <div class="half">
             <img class="vlp-img" src="~@/assets/VirtualListeningParty.png">
-
             <span class="studio-about">
                 This is a space to be connected. Not just through music but through a shared experience during a time when each of us is isolated from the other. 
                 <br>
@@ -48,19 +47,40 @@
             </div>
         </div>
     </div>
+
+    <div class="rsvp-confirmation" :class="{'success-active': success}">
+        <div class="rsvp-text">
+            <h1 class="confirmation-title">
+                RSVP successful!
+            </h1>
+            <p class="confirmation-text">
+                Thank you for signing up, we are excited to have you join the party! 
+                <br>
+                <br>
+                You'll receive information regarding the event and a link to enter the experience on Saturday, May 2nd at 6:00PM EST.
+                <br>
+                <br>
+                
+            </p>
+            <button @click="closeWindow" style="border-color: white; color: white;" class="about-button">
+                EXIT
+            </button>
+        </div>
+    </div>
+
   </div>
 </template>
 
 <script>
 
-    import {db} from '@/fb/index';
+    import { db } from '@/fb/index';
 
     export default {
         components: {},
         props: ['state'],
         data() {
             return {
-            
+                success: false
             }
         },
         firebase: {
@@ -76,11 +96,15 @@
                     db.collection('mailing').add({name: name.value, email: email.value});
                     name.value = '';
                     email.value = '';
-                    this.$emit('sent');
-                }
+                    this.sendSuccess();
+                }                
             },
-            closeWindow() {
+            sendSuccess() {
+                this.success = true;
+            },
 
+            closeWindow() {
+                this.success = false;
                 this.$emit('sent');
             }
         }
@@ -158,6 +182,48 @@
         margin-top: 20px;
     }
 
+    .rsvp-confirmation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background-color: black;
+        color: white;
+        font-family: Maison Neue;
+        z-index: 11;
+        opacity: 0;
+        transition: opacity .25s;
+        pointer-events: none;
+    }
+
+    .success-active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .success-passive {
+        opacity: 0;
+    }
+
+    .rsvp-text {
+        width: 40%;
+    }
+
+    .confirmation-title {
+        font-size: 48px;
+        line-height: 56px;;
+    }
+
+    .confirmation-text {
+        font-size: 32px;
+        line-height: 48px;;
+    }
+
     @media (min-width: 320px) and (max-width: 425px) {
         .rsvp-grid {
             flex-direction: column;
@@ -195,6 +261,24 @@
 
         .studio-about {
             margin-bottom: 10px;
+        }
+
+        .rsvp-confirmation {
+            align-items: start;
+        }
+
+        .rsvp-text {
+            width: 100%;
+        }
+
+        .confirmation-title {
+            font-size: 28px; 
+            line-height: 40px;;
+        }
+
+        .confirmation-text {
+            font-size: 20px;
+            line-height: 28px;;
         }
     }
 
