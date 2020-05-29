@@ -7,21 +7,12 @@
             </span>
         </div>
         <div class="half">
-            <img class="vlp-img" src="~@/assets/VirtualListeningParty.png">
-            <span class="studio-about">
-                This is a space to be connected. Not just through music but through a shared experience during a time when each of us is isolated from the other. 
-                <br>
-                <br>
-                Set times will start promptly at 10:00PM EST and the livestream will end at 1:00AM EST. Visuals are done in collaboration with Oyl.
-                <br>
-                <br>
-                To stay updated on event details and to recieve a link to join the party, register with your name and email.
-                <br>
-                <br>
-                Your name and email WILL NOT be used for anything other than sending you details on the event and links the actual experience. 
-                Before the event we will send out an email asking if you'd like to stay informed of future events, you can accept or deny continued correspondance at any time.
+            <span class="studio-title">
+                Stay in touch!
             </span>
-            <img class="vlp-set" src="~@/assets/SetTimes2.png">        
+            <span class="studio-about">
+                Sign up with your name and email address to stay tuned for news about the studio and upcoming events!
+            </span>
         </div> 
         <div class="half">
             <span class="studio-title">
@@ -43,7 +34,7 @@
             </div>
 
             <div>
-                <button @click="sendInfo" style="border-color: white; color: white;" class="about-button">SEND</button>
+                <button @click="sendInfo" style="border-color: white; color: white;" class="about-button">SUBMIT</button>
             </div>
         </div>
     </div>
@@ -51,13 +42,13 @@
     <div class="rsvp-confirmation" :class="{'success-active': success}">
         <div class="rsvp-text">
             <h1 class="confirmation-title">
-                RSVP successful!
+                You've been added!
             </h1>
             <p class="confirmation-text">
                 Thank you for signing up, we are excited to have you join the party! 
                 <br>
                 <br>
-                You'll receive information regarding the event and a link to enter the experience on Saturday, May 2nd at 6:00PM EST.
+                You'll receive receive a confirmation email shortly!
                 <br>
                 <br>
                 

@@ -15,12 +15,10 @@
             <div class="about-col">
                 <h1 class="about-title">Coming Soon</h1>
                 <h1 class="about-body">
-                    Mixed Signals Virtual Listening Party
-                    <br />
-                    May 2, 2020 @ 10PM EST
+                    Sign up for our mailing list
                 </h1>
                 <div style="display: flex; justify-content: space-between; width: 100%; ">
-                <button @click="relay" class='about-button'>RSVP HERE</button>
+                <button @click="relay" class='about-button'>SIGN UP</button>
 
                 <span style="display: block; block; font-size: 56px; color: black;" class="material-icons">
                     arrow_downward
